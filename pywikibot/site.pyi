@@ -26,6 +26,9 @@ class BaseSite:
         rollback: bool = False,
     ) -> None: ...
 
+class APISite(BaseSite):
+    def login(self, sysop: bool = False, autocreate: bool = False) -> None: ...
+
 class Namespace(Iterable["Namespace"], ComparableMixin, UnicodeMixin):
     MEDIA = -2
     SPECIAL = -1

@@ -4,7 +4,7 @@ from pywikibot.logging import output, error, exception, log, warning
 from pywikibot.exceptions import Error, EditConflict, NoPage
 from pywikibot.page import Page, User, Link
 from pywikibot.mypy import RecentChangesInfo
-from pywikibot.site import BaseSite
+from pywikibot.site import BaseSite, APISite
 from pywikibot.bot import handle_args
 from pywikibot.data.api import APIError
 from pywikibot.comms.eventstreams import site_rc_listener
