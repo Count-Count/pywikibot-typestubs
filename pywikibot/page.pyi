@@ -1,4 +1,11 @@
-from typing import Union, Optional, Literal, Any, Dict, TypedDict
+import sys
+from typing import Union, Optional, Any, Dict
+
+if sys.version_info >= (3, 8):
+    from typing import Literal
+else:
+    from typing_extensions import Literal
+
 from pywikibot.tools import ComparableMixin
 import pywikibot
 

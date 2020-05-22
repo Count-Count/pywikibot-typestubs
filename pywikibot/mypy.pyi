@@ -1,4 +1,10 @@
-from typing import Union, Optional, Literal, Any, Dict, TypedDict
+import sys
+from typing import Any, Dict, Optional, Union
+
+if sys.version_info >= (3, 8):
+    from typing import Literal, TypedDict
+else:
+    from typing_extensions import Literal, TypedDict
 
 _Revision = TypedDict("_Revision", {"old": int, "new": int}, total=False)
 _Length = TypedDict("_Length", {"old": int, "new": int}, total=False)
