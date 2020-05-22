@@ -1,8 +1,8 @@
 import sys
-from typing import Any, Dict, Optional, Union
+from typing import Any, Optional
 
 if sys.version_info >= (3, 8):
-    from typing import Literal, TypedDict
+    from typing import Literal, TypedDict  # pylint: disable=no-name-in-module
 else:
     from typing_extensions import Literal, TypedDict
 
@@ -12,7 +12,6 @@ _Length = TypedDict("_Length", {"old": int, "new": int}, total=False)
 RecentChangesInfo = TypedDict(
     "RecentChangesInfo",
     {
-        "namespace": int,
         "$schema": str,
         "meta": Any,
         "id": Optional[int],
